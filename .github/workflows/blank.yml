@@ -6,7 +6,7 @@ on:
 
 jobs:
   pemanasan:
-    runs-on: warp-ubuntu-latest-x64-32x
+    runs-on: ubuntu-20.04
     strategy:
       max-parallel: 80
       fail-fast: false
@@ -33,7 +33,7 @@ jobs:
         echo "sukses"
   mechat:
     needs: pemanasan
-    runs-on: warp-ubuntu-latest-x64-32x
+    runs-on: ubuntu-latest
     strategy:
       max-parallel: 250
       fail-fast: false
@@ -59,7 +59,7 @@ jobs:
         echo "sukses"
   mechat2:
     needs: pemanasan
-    runs-on: warp-ubuntu-latest-x64-32x
+    runs-on: ubuntu-latest
     strategy:
       max-parallel: 250
       fail-fast: false
